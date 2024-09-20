@@ -235,13 +235,14 @@ class PROTOBUF_EXPORT CppFeatures final
       : CppFeatures(arena) {
     *this = ::std::move(from);
   }
-  const ::google::protobuf::Message::ClassData* GetClassData() const PROTOBUF_FINAL;
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
   static void* PlacementNew_(const void*, void* mem,
                              ::google::protobuf::Arena* arena);
   static constexpr auto InternalNewImpl_();
-  static const ::google::protobuf::Message::ClassDataFull _class_data_;
 
  public:
+  static constexpr auto InternalGenerateClassData_();
+
   ::google::protobuf::Metadata GetMetadata() const;
   // nested types ----------------------------------------------------
   using StringType = CppFeatures_StringType;
@@ -339,6 +340,8 @@ class PROTOBUF_EXPORT CppFeatures final
   union { Impl_ _impl_; };
   friend struct ::TableStruct_google_2fprotobuf_2fcpp_5ffeatures_2eproto;
 };
+
+extern const ::google::protobuf::internal::ClassDataFull CppFeatures_class_data_;
 
 // ===================================================================
 
