@@ -13,7 +13,7 @@ static VALUE initialize_rb_class_with_no_args(VALUE klassrb_funcall(klass, rb_in
 }
 
 VALUE MessageOrEnum_GetDescriptor(VALUE klass) {
-  return rb_ivar_get(klass, descriptor_instancevar_interned);
+  rb_ivar_get(klass, descriptor_instancevar_interned);
 }
 
 // -----------------------------------------------------------------------------
