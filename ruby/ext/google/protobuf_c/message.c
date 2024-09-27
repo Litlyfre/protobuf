@@ -3,23 +3,13 @@
 //
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file or at
-// https://developers.google.com/open-source/licenses/bsd
-
-#include "message.h"
-
-#include "convert.h"
-#include "defs.h"
-#include "map.h"
-#include "protobuf.h"
-#include "repeated_field.h"
-#include "shared_message.h"
+// https://developers.google.com/open-source/licenses/
 
 static VALUE cParseError = Qnil;
 static VALUE cAbstractMessage = Qnil;
 static ID descriptor_instancevar_interned;
 
-static VALUE initialize_rb_class_with_no_args(VALUE klass) {
-  return rb_funcall(klass, rb_intern("new"), 0);
+static VALUE initialize_rb_class_with_no_args(VALUE klassrb_funcall(klass, rb_intern("new"), 0);
 }
 
 VALUE MessageOrEnum_GetDescriptor(VALUE klass) {
